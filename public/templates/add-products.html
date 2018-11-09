@@ -1,0 +1,61 @@
+	<!-- Add a Product Page -->
+<div class="container">	
+	<div class="Form col text-center addProductsForm">
+		<form action="https://sherpa-offroad-image-upload.s3.amazonaws.com/" method="post" enctype="multipart/form-data" class="addProductsForm" ng-controller="AddImageCtrl">
+			<input type="hidden" name="key" value="uploads/${filename}"> 
+			<input type="hidden" name="AWSAccessKeyId" value="AKIAJQMJXT4CWOBG7ELQ">
+			<input type="hidden" name="acl" value="private">
+			<input type="hidden" name="success_action_redirect" value="http://localhost:3000/#/add-products">
+			<input type="hidden" name="policy" value="eyJleHBpcmF0aW9uIjogIjIwMjAtMDEtMDFUMDA6MDA6MDBaIiwKICAiY29uZGl0aW9ucyI6IFsKICAgIHsiYnVja2V0IjogInNoZXJwYS1vZmZyb2FkLWltYWdlLXVwbG9hZCJ9LAogICAgWyJzdGFydHMtd2l0aCIsICIka2V5IiwgInVwbG9hZHMvIl0sCiAgICB7ImFjbCI6ICJwcml2YXRlIn0sCiAgICB7InN1Y2Nlc3NfYWN0aW9uX3JlZGlyZWN0IjogImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC8jL2FsbC1wcm9kdWN0cyJ9LAogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgImltYWdlLyJdLAogICAgWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsIDAsIDUyNDI4ODAwMF0KICBdCn0=">
+			<input type="hidden" name="signature" value="fIgqg4DcRTVfajdqW0mUquYY8PY=">
+			<input type="hidden" name="Content-Type" value="image/">
+			<!-- Include any additional input fields here -->
+			<!-- File to upload to S3:  -->
+			<input name="file" type="file" ngf-select ngf-change="onFileSelect($files)">
+			<!-- <input type="text" ng-value="{{image_url}}"> -->
+			<!-- <br> -->
+			<!-- <input type="submit" value="Upload File to S3" ngf-change="onFileSelect($files)"> -->
+		</form>
+		<form ng-submit="submit()" ng-controller="AddProductsCtrl">
+			<div class="form-group">
+				<!-- <label for="inputEmail4">Name</label> -->
+				<input type="text" class="form-control" id="productMake" placeholder="Year of Vehicle" ng-model="newProduct.product_info.year">
+			</div>
+			<div class="form-group">
+				<!-- <label for="inputEmail4">Name</label> -->
+				<input type="text" class="form-control" id="productMake" placeholder="Maker of Vehicle" ng-model="newProduct.product_info.make">
+			</div>
+			<div class="form-group">
+				<!-- <label for="inputEmail4">Name</label> -->
+				<input type="text" class="form-control" id="productName" placeholder="Model of Vehicle" ng-model="newProduct.product_info.model">
+			</div>
+			<div class="form-group">
+				<!-- <label for="inputEmail4">Name</label> -->
+				<input type="text" class="form-control" id="productName" placeholder="Product Name" ng-model="newProduct.product_info.name">
+			</div>
+			<div class="form-group">
+				<!-- <label for="inputPassword4">Email</label> -->
+				<input type="number" class="form-control" id="ProductPrice" placeholder="Product Price" ng-model="newProduct.product_info.price">
+			</div>
+			<div class="form-group">
+				<!-- <label for="inputAddress">Subject</label> -->
+				<input type="number" class="form-control" id="shippingPrice" placeholder="Shipping Price"ng-model="newProduct.product_info.shipping_price">
+			</div>
+			<div class="form-group">
+				<!-- <label for="inputAddress">Subject</label> -->
+				<input type="number" class="form-control" id="quantityInStock" placeholder="Quantity In Stock" ng-model="newProduct.product_info.quantity_in_stock">
+			</div>
+			<div class="form-group">
+				<!-- <label for="exampleFormControlTextarea1">Message</label> -->
+				<textarea class="form-control" id="description" rows="6" placeholder="Description" ng-model="newProduct.product_info.description"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">Create Product</button>
+		</form>
+	</div>
+</div>
+
+<!-- Footer Section -->
+
+<footer class="footer text-center col-lg-12">
+    <h4 class="trademark">&copy;2018 by Sherpa Offroad LLC</h4>
+</footer>

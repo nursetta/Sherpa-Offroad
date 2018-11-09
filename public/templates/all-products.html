@@ -1,0 +1,26 @@
+<!-- Products Offered for Toyota 4Runner 4th Gen.  -->
+<!-- 4Runner Product Cards -->
+
+<div ng-repeat="product in products"></div>
+<div class="container">
+	<div class="card-columns container">
+	  <!-- <div class="card" ng-repeat="product in product | filter : '460'"> -->
+	  <div class="card" ng-repeat="product in product">	
+	    <img class="card-img-top" src={{product.product_info.image_url}} alt="Card image cap">
+	    <div class="card-body">
+	      <h5 class="card-text">{{product.product_info.price | currency}}</h5>
+	      <p class="card-title">{{product.product_info.name}}</p>
+	      <!-- <p class="card-title">{{product.product_info.description}}</p>  -->
+	    </div>
+	    <div class="card-footer">
+	      <a href="/#/product/{{product._id}}" class="btn btn-outline-secondary container-fluid">More Details</a>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+<!-- Footer Section -->
+
+<footer class="footer text-center col-lg-12">
+    <h4 class="trademark">&copy;2018 by Sherpa Offroad LLC</h4>
+</footer>

@@ -1,0 +1,89 @@
+<div class="container"> 
+    <div class="text-center">
+        <input name="file" type="file" ngf-select ngf-change="onFileSelect($files)" class="text-center addProductsForm">
+    </div>
+</div>
+    <!-- Add a Product Page -->
+<div class="container"> 
+    <div class="Form col text-center">
+        <form ng-submit="submit()" ng-controller="AddImageCtrl2">
+            <div class="form-group">
+                <!-- <label for="inputEmail4">Name</label> -->
+                <input type="text" class="form-control" id="mainPhoto" placeholder="Picture URL" ng-model="newProduct.product_info.image_url">
+            </div>
+            <div class="form-group">
+                <!-- <label for="inputEmail4">Name</label> -->
+                <input type="text" class="form-control" id="productMake" placeholder="Year of Vehicle" ng-model="newProduct.product_info.year" ng-change="onImageUpload()">
+            </div>
+            <div class="form-group">
+                <!-- <label for="inputEmail4">Name</label> -->
+                <input type="text" class="form-control" id="productMake" placeholder="Maker of Vehicle" ng-model="newProduct.product_info.make">
+            </div>
+            <div class="form-group">
+                <!-- <label for="inputEmail4">Name</label> -->
+                <input type="text" class="form-control" id="productName" placeholder="Model of Vehicle" ng-model="newProduct.product_info.model">
+            </div>
+            <div class="form-group">
+                <!-- <label for="inputEmail4">Name</label> -->
+                <input type="text" class="form-control" id="productName" placeholder="Product Name" ng-model="newProduct.product_info.name">
+            </div>
+            <div class="form-group">
+                <!-- <label for="inputPassword4">Email</label> -->
+                <input type="number" class="form-control" id="ProductPrice" placeholder="Product Price" ng-model="newProduct.product_info.price">
+            </div>
+            <div class="form-group">
+                <!-- <label for="inputAddress">Subject</label> -->
+                <input type="number" class="form-control" id="shippingPrice" placeholder="Shipping Price"ng-model="newProduct.product_info.shipping_price">
+            </div>
+            <div class="form-group">
+                <!-- <label for="inputAddress">Subject</label> -->
+                <input type="number" class="form-control" id="quantityInStock" placeholder="Quantity In Stock" ng-model="newProduct.product_info.quantity_in_stock">
+            </div>
+            <div class="form-group">
+                <!-- <label for="exampleFormControlTextarea1">Message</label> -->
+                <textarea class="form-control" id="description" rows="6" placeholder="Description" ng-model="newProduct.product_info.description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Product</button>
+        </form>
+    </div>
+</div>
+<br>
+
+<!-- Footer Section -->
+
+<footer class="footer text-center col-lg-12">
+    <h4 class="trademark">&copy;2018 by Sherpa Offroad LLC</h4>
+</footer>
+
+
+<!--  -->
+<!--  -->
+<!-- Upload a file to s3 through an HTML form -->
+<!--  -->
+<!--  -->
+
+
+  <!-- <form id="addImageForm" action="https://sherpa-offroad-image-upload.s3.amazonaws.com/" method="post" enctype="multipart/form-data" class="addProductsForm" ng-submit="submit()"> -->
+    <!-- Key to upload:  -->
+    <!-- <input type="hidden" name="key" value="public/${filename}" /><br /> -->
+    <!-- <input type="hidden" name="acl" value="public-read" /> -->
+    <!-- <input type="hidden" name="success_action_redirect" value="https://localhost:3000/#/add-products" /> -->
+    <!-- Content-Type:  -->
+    <!-- <input type="hidden" name="Content-Type" value="image/" /><br /> -->
+    <!-- <input type="hidden" name="x-amz-server-side-encryption" value="AES256" />  -->
+    <!-- <input type="hidden" name="X-Amz-Credential" ng-value="credentials" /> -->
+    <!-- <input type="hidden" name="X-Amz-Algorithm" value="AWS4-HMAC-SHA256" /> -->
+    <!-- <input type="hidden" name="X-Amz-Date" ng-value="date" /> -->
+
+    <!-- Tags for File:  -->
+    <!-- <input type="hidden" name="x-amz-meta-tag" value="" /><br /> -->
+    <!-- <input type="hidden" name="Policy" ng-value="policyBase64" /> -->
+    <!-- <input type="hidden" name="X-Amz-Signature" ng-value="signature" /> -->
+    <!-- File:  -->
+    <!-- <input name="file" type="file" ngf-select ngf-change="onFileSelect($files)" ng-model="newProduct.product_info.image_url"> -->
+    <!-- <br /> -->
+    <!-- <br /> -->
+    <!-- The elements after this will be ignored -->
+    <!-- <input type="submit" name="submit" value="Upload to S3" /> -->
+  <!-- </form> -->
+          

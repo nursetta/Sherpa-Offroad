@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sherpa-Offroad</title>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+  <!-- <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+
+</head>
+
+<body ng-app="ProductInfo">
+
+<!-- Navbar Section with click and hover feature. -->
+<!-- Hover feature and click feature are clashing. Need to look into -->
+  <nav class="navbar navbar-dark fixed-top navbar-expand-lg">
+    <div class="container navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="mobile_sherpa_logo col">SHERPA OFFROAD</span>
+    </div>
+    <div class="sherpa_nav_bar_logo_box text-center">SHERPA OFFROAD</div>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link nav-home text-center" href="#/">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-toyota" href="#" target="_blank" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TOYOTA
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item nav-4runner text-center" href="#/4runner-products">4RUNNER</a>
+            <a class="dropdown-item nav-fj-cruiser text-center" href="#/fj-cruiser-products">FJ CRUISER</a>
+          </div>
+          <li class="nav-item dropdown">
+          <a class="nav-link nav-lexus" href="#/4runner-products" target="_blank" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          LEXUS
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item nav-gx460 text-center" href="#/gx-460-products">GX 460 </a>
+            <a class="dropdown-item nav-gx470 text-center" href="#/gx-470-products">GX 470</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-cheverolet" href="#" target="_blank" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CHEVROLET
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item nav-colorado text-center" href="#/colorado-products">CANYON/COLORADO</a>
+          </div>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-armor" href="#/the-armory">ARMOR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-toughdog" href="#/toughdog-suspension">TOUGHDOG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-treaty-oak" href="#/treaty-oak-recovery">TREATY OAK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-product-detail" href="#/all-products">ALL PRODUCTS</a>
+        </li>
+      </ul>
+    </div>
+  </nav>  
+
+<!-- Anything you want displayed between the header and footer needs to utilize angular and a controller. ng-view down below. -->
+<div class="view" ng-view></div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
+
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/productsController.js"></script>
+<!-- <script src="config.js"></script> -->
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
